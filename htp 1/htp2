@@ -1,0 +1,21 @@
+HTTP stands for Hyper Text Transfer Protocol is an application protocol which first released in the year 1997.
+It uses TCP (Transfer Control Protocol) which is a reliable protocol that ensures that all the packets are delivered (from web server)without any loss and loads the webpage completely.
+If some packets fail to arrive, HTTP requests the packets to be sent again from the server (to client) for the webpage to load completely
+Early version of HTTP — HTTP/1.1
+HTTP1.1 was actually the THIRD VERSION of HTTP and over the years it laid the foundation for standard requests such as GET, POST, PUT and LAID.
+HTTP1.1 can only load one request at a time, that means there can only be one request for one TCP connection.
+This can create latency in loading the web pages which means content delivery gets slower.
+So, this drawback led to the creation of Google’s SPDY protocol which inturn led to the modelling of HTTP2 (it was based on SPDY) in which new features were also introduced along with it, this made Google to remove support of SPDY in favour of HTTP2.
+HTTP/1.1 vs. HTTP/2 Protocol
+Binary protocols :
+(a) HTTP2 consumes less bandwidth compared to textual protocol in HTTP1.1.
+(b) It is more-efficiently parsed and less-error prone and they can better handle elements such as whitespace, capitalization and line endings.
+Multiplexing :
+(a) HTTP/2 is multiplexed, i.e., it can initiate multiple requests in parallel over a single TCP connection.
+(b) As a result, web pages containing several elements are delivered over one TCP connection.
+(C) These capabilities solve the head-of-line blocking problem in HTTP/1.1, in which a packet at the front of the line blocks others from being transmitted.
+Header compression :
+(a) HTTP/2 uses header compression to reduce the overhead caused by TCP’s slow-start mechanism.
+(b) TCP slow start is an algorithm which balances the speed of a network connection. Slow start gradually increases the amount of data transmitted until it finds the network’s maximum carrying capacity.
+Server push : HTTP/2 servers push likely-to-be-used resources into a browser’s cache, even before they’re requested. This allows browsers to display content without additional request cycles.
+Increased security : Web browsers only support HTTP/2 via encrypted connections, increasing user and application security.
